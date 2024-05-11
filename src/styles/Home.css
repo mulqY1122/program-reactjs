@@ -3,14 +3,19 @@
   width: 100%;
 }
 
-a.tbl-biru {
-  background: #3f72af;
+a.tbl-biru,
+a.tbl-pink {
   border-radius: 20px;
   margin-top: 20px;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px;
   color: #ffffff;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+a.tbl-biru {
+  background: #3f72af;
 }
 
 a.tbl-biru:hover {
@@ -20,32 +25,27 @@ a.tbl-biru:hover {
 
 a.tbl-pink {
   background: #fc5185;
-  border-radius: 20px;
-  margin-top: 20px;
-  padding: 15px 20px 15px 20px;
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 a.tbl-pink:hover {
   background: #3f72af;
   text-decoration: none;
 }
+
 section {
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
 p {
-  margin: 10px 0px 10px 0px;
-  padding: 10px 0px 10px 0px;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 
 .kolom {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .kolom .deskripsi {
@@ -65,11 +65,6 @@ h2 {
   line-height: 50px;
 }
 
-.tengah {
-  text-align: center;
-  width: 100%;
-}
-
 @media screen and (max-width: 991.98px) {
   section {
     display: block;
@@ -79,5 +74,19 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .kolom .deskripsi,
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kolom .deskripsi,
+  h2 {
+    font-size: 25px;
+    line-height: 35px;
   }
 }
